@@ -18,11 +18,10 @@ class Initializer implements CommandLineRunner {
     public void run(String... strings) {
         Profile initialProfile = new Profile();
         initialProfile.setId(1L);
-        initialProfile.setName("Max");
+        initialProfile.setName("Mike Burkhard");
         initialProfile.setImage("https://moonvillageassociation.org/wp-content/uploads/2018/06/default-profile-picture1.jpg");
-        initialProfile.setDescription("Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.");
-        initialProfile.setLink("https://www.google.ch/");
+        initialProfile.setDescription("Ich arbeite zurzeit als Software Ingenieur im firmenübergreifenden Trainee-Programm der M&F Engineering AG (mehr Details unter m-f.ch/software-trainee-programm). Das Ziel dieses Programms ist es, junge motivierte Software Ingenieure wie mich und innovative Technologie-Firmen wie Sie zusammen zu bringen. Als Trainee habe ich die Möglichkeit, in 3 Jahren drei bis fünf Einsätze bei verschiedenen Partnerfirmen zu absolvieren und jeweils 6-12 Monate bei einer Partnerfirma im Software-Team vor Ort mitzuarbeiten.");
+        initialProfile.setLink("https://www.m-f.ch/software-trainee-programm");
         repository.save(initialProfile);
-        repository.findAll().forEach(System.out::println);
     }
 }
