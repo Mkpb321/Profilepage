@@ -22,7 +22,7 @@ public class ProfileRestController {
 
     @PutMapping(value = "")
     public Profile add(@RequestBody Profile newProfile, HttpServletResponse response) {
-        if (newProfile.name != null && newProfile.name.length() <= 16) {
+        if (newProfile.name == null || newProfile.name.length() <= 16) {
             profile = newProfile;
         }
         else {
