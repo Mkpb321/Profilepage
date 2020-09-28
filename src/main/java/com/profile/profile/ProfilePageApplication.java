@@ -13,7 +13,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @SpringBootApplication
 public class ProfilePageApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(ProfilePageApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(ProfilePageApplication.class, args);
+    }
 }

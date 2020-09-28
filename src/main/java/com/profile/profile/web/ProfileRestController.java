@@ -19,18 +19,18 @@ public class ProfileRestController {
     private ProfileRepository profileRepository;
 
     @GetMapping(value = {"/{id}"})
-    public Optional<Profile> get(@PathVariable(value="id") Long id, HttpServletResponse response) throws IOException {
+    public Optional<Profile> get(@PathVariable(value = "id") Long id, HttpServletResponse response) throws IOException {
         Optional<Profile> profile = profileRepository.findById(id);
-        if(profile.isEmpty()) {
+        if (profile.isEmpty()) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Profile not found");
         }
         return profile;
     }
 
     @PutMapping(value = "/{id}")
-    public Optional<Profile> edit(@PathVariable(value="id") Long id, @RequestBody Profile newProfile, HttpServletResponse response) {
+    public Optional<Profile> edit(@PathVariable(value = "id") Long id, @RequestBody Profile newProfile, HttpServletResponse response) {
         Optional<Profile> oldProfile = profileRepository.findById(id);
-        if(oldProfile.isEmpty()) {
+        if (oldProfile.isEmpty()) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Profile not found");
         }
         if (newProfile.getName() != null && newProfile.getName().length() > 16) {
