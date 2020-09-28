@@ -6,6 +6,7 @@ import javax.persistence.*;
 public class Profile {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
     @Column(length = 16)
